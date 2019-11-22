@@ -1,5 +1,6 @@
 def caesar_cipher(string, shift)
 
+    # Hash to store the unicode ranges of upperase and lowercase letters
     character_ranges = {:uppercase => (65..90), :lowercase => (97..122)}
     shifted_string_array = [];
 
@@ -27,6 +28,7 @@ def caesar_cipher(string, shift)
     return shifted_string_array.join;
 end
 
+# This function is extra, it deciphers text written in the caesar cipher given a known shift
 def caesar_decipher(string, deshift)
 
     character_ranges = {:uppercase => (65..90), :lowercase => (97..122)}

@@ -1,16 +1,12 @@
 def substrings(string, dictionary)
-    # create an emtpy hash for patterns and their frequency
-    # split our string into words
-    # loop through each word in our string
-    #   loop through each pattern in our dictionary array
-    #       if word matches a pattern
-    #           if the pattern does not exist in our frequency hash
-    #               add the pattern and set it's frequency to 1
-    #           else
-    #               incrememnt the pattern's frequency
     pattern_frequency_hash = {}
+
+    # split our string into words and loop through each word in our string
     string.split(" ").each do |word|
+        # loop through each pattern in our dictionary array
         dictionary.each do |pattern|
+
+            # increment a found pattern's frequency by one or create it in our hash
             if  word =~ Regexp.new(pattern)
                 if (pattern_frequency_hash[pattern])
                     pattern_frequency_hash[pattern] += 1;
